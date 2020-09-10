@@ -15,4 +15,10 @@ try {
     }
       } catch (Exception $e) {
   echo $e->getMessage();
+
+foreach ($_POST as $key =>value) {
+  $stmt->bindParam(":".$key, $value);
+ $stmt->bindParam(parameter:":".$key, &variable:$value);
+}
+
 }
